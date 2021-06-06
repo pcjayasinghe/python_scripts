@@ -26,13 +26,13 @@ shortCode = random.randrange(110, 120)
 userName = names.get_full_name()
 
 # Print The logfile
-randomLog = {'start date': str(startDate), 'End Date': str(endDate), 'msisdn': MSISDN, 'Short Code': shortCode, 'user name': userName}
-print(randomLog)
+randomLog = {"start date": str(startDate), "End Date": str(endDate), "msisdn": MSISDN, "Short Code": shortCode, "user name": userName}
+print(json.dumps(randomLog))
 
 # Loop log file printing
 i = 0
 while i < 10:
-    print(randomLog)
+    print(json.dumps(randomLog))
     i += 1
 
 
