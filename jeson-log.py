@@ -2,7 +2,7 @@
 
 # =============================================================================
 # |<-- Note -->|
-# This 5 key vaslue paire log generator python script
+# This is key:value pairs log generator python script
 # 1.id
 # 2.start_datetime
 # 3.end_datetime
@@ -18,7 +18,7 @@ import json
 # Extra Minutes Generator
 extraMinutes = random.randrange(5, 10)
 
-# Value variablesvim 
+# Value variablesvim
 startDate = datetime.datetime.now().replace(microsecond=0)
 endDate = startDate + datetime.timedelta(minutes=extraMinutes)
 MSISDN = random.randrange(771000001, 771000005)
