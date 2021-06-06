@@ -13,21 +13,28 @@
 import datetime
 import names
 import random
+import json
 
 # Extra Minutes Generator
 extraMinutes = random.randrange(5, 10)
 
-# Value variables
-startDate: datetime = datetime.datetime.now().replace(microsecond=0)
+# Value variablesvim 
+startDate = datetime.datetime.now().replace(microsecond=0)
 endDate = startDate + datetime.timedelta(minutes=extraMinutes)
 MSISDN = random.randrange(771000001, 771000005)
 shortCode = random.randrange(110, 120)
 userName = names.get_full_name()
 
 # Print The logfile
-print("{", "start date:", startDate, ",", "End Date: ", endDate,  ",", "msisdn :", MSISDN, ",", "Short Code :", shortCode, ",", "user name :", userName, "}")
+randomLog = {'start date': str(startDate), 'End Date': str(endDate), 'msisdn': MSISDN, 'Short Code': shortCode, 'user name': userName}
+print(randomLog)
 
-#print("{", "msisdn :", MSISDN, ",", "user name :", userName, "}")
+# Loop log file printing
+i = 0
+while i < 10:
+    print(randomLog)
+    i += 1
 
-#print('{' "start_date" ':' + startDate + ','  '}')
+
+
 
